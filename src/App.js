@@ -1,23 +1,71 @@
-import logo from './logo.svg';
+import { useState } from "react";
+import { marked } from "marked";
 import './App.css';
 
 function App() {
+
+  // inline code
+  // code block
+  // list item 
+  // blockquote
+  // image
+  // bolded text
+  const [text, setText] = useState(`
+  # Welcome to my React Markdown Project!
+
+  ## This is a subheading.
+
+  ### Here are some more examples of using markdown:
+
+  This is a [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley)
+
+  This is code: 
+  \`<div></div>\` 
+
+  And this is a code block: 
+  \`\`\` 
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 24
+  } 
+  \`\`\`
+
+  These are list items:
+  - Villager
+  - Duck Hunt
+  - Mario
+
+
+  This is a blockquote:
+  > Backslash!
+
+  This is an image:
+  ![alt text](image.jpg)
+
+  This is bolded text:
+  **PK Fire!**
+  `);
+
+  marked.setOptions({
+    breaks: true
+  })
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <textarea 
+        id="editor"
+        onChange={(event) => {
+          setText(event.target.value);
+        }}
+        value={text}
+      ></textarea>
+      <div 
+        id="preview"
+        dangerouslySetInnerHTML={{
+          __html: marked(text),
+        }}
+      ></div>
     </div>
   );
 }
