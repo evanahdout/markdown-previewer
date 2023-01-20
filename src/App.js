@@ -3,13 +3,6 @@ import { marked } from "marked";
 import './App.css';
 
 function App() {
-
-  // inline code
-  // code block
-  // list item 
-  // blockquote
-  // image
-  // bolded text
   const [text, setText] = useState(`
   # Welcome to my React Markdown Project!
 
@@ -41,7 +34,7 @@ function App() {
   > Backslash!
 
   This is an image:
-  ![alt text](image.jpg)
+  ![Person in a forest shining a flashlight on snow with a backdrop of a starry night](person-in-snow.jpg)
 
   This is bolded text:
   **PK Fire!**
