@@ -1,0 +1,128 @@
+:root {
+    --text-color: #323232;
+    --body-background-color: #f7f7f7;
+    --toolbar-color: #8b8b8f;
+    --editor-previewer-color: #ebebed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 10px 0;
+    color: var(--text-color);
+    background-color: var(--body-background-color);
+}
+
+#editorWrap {
+    margin: 0 auto;
+    border: 1px solid black;
+    margin: 1.125rem auto;
+    max-width: 600px;
+    background-color: var(--editor-previewer-color);
+}
+
+#editorWrap .toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--toolbar-color);
+}
+
+#editorWrap textarea {
+    width: 99%;
+    min-height: 150px;
+    margin-bottom: -5px;
+    resize: vertical;
+    outline: none;
+    border: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 0.9rem;
+    background-color: var(--editor-previewer-color);
+}
+
+#separator {
+    height: 50px;
+    max-height: 200px;  
+}
+
+#previewWrap {
+    margin: 0 auto;
+    border: 1px solid black;
+    max-width: 800px;
+    min-height: 200px;
+    overflow-wrap: break-word;
+    background-color: var(--editor-previewer-color)
+}
+
+#previewWrap .toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--toolbar-color)
+}
+
+#preview {
+    padding: 1rem 1.5rem;
+}
+
+/*Markdown*/
+#preview a {
+    text-decoration: none;
+    color: blue;
+}
+
+#preview blockquote {
+  border-left: 3px solid black;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+#preview > p > code {
+  padding: 3px;
+}
+#preview code {
+  background: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+#preview pre {
+  display: block;
+  overflow: auto;
+  background: white;
+  padding: 5px;
+  line-height: 1.2;
+}
+#preview h1 {
+  border-bottom: 2px solid #224b4b;
+}
+#preview h2 {
+  border-bottom: 1px solid #224b4b;
+}
+#preview table {
+  border-collapse: collapse;
+}
+#preview td,
+#preview th {
+  border: 2px solid #224b4b;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#preview img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+}
