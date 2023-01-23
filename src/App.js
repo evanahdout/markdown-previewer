@@ -10,7 +10,7 @@ function App() {
 `# Welcome to my React Markdown Project!
 ## The user can type input text in the editor box and a markdown output of that text will be displayed in the preview box.
 ### Here are some more examples of using markdown:
-You can insert links: [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley)
+You can insert a link: [link](https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley)
 You can also insert code: \`<div></div>\` 
 This is a code block: 
 \`\`\` 
